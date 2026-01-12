@@ -1,11 +1,10 @@
 #include "Zombie.hpp"
 
-Zombie :: Zombie(std::string name)
-{
-    this->name = name;
-}
+Zombie::Zombie() : name("Unnamed") {}
 
-Zombie ::~Zombie()
+Zombie::Zombie(std::string name) : name(name) {}
+
+Zombie :: ~Zombie()
 {
     std::cout << name << " is destroyed" << std::endl;
 }

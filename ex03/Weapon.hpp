@@ -1,25 +1,19 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: zal-qais <zal-qais@student.42amman.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 20:21:02 by zal-qais          #+#    #+#             */
-/*   Updated: 2026/01/08 20:28:51 by zal-qais         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
 #include <iostream>
 #include <string>
 
-class Weapon 
+class Weapon
 {
     private:
-        std:: string type;
-    public:
-        const std::string &getType( void );
-        void setType( std::string type );
+        std::string type;
+
+        public:
+        Weapon(std::string type);
+        ~Weapon();
+        std::string const &getType(void) const;
+        void setType(std::string type);
 };
 
-
+#endif

@@ -1,18 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: zal-qais <zal-qais@student.42amman.com>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 20:29:24 by zal-qais          #+#    #+#             */
-/*   Updated: 2026/01/08 20:36:51 by zal-qais         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
+#include <iostream>
+#include <string>
 #include "Weapon.hpp"
 
 class HumanA
 {
-    Weapon GUN;    
+    private:
+        std::string name;
+        Weapon &weapon;
+
+    public:
+        HumanA(std::string name, Weapon &weapon);
+        ~HumanA();
+        void attack(void) const;
 };
+
+#endif
