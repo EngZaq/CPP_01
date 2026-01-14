@@ -32,22 +32,16 @@ void Harl::complain(std::string level)
     std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
     int i = 0;
 
-    // 1. Convert string to integer index
     while (i < 4 && levels[i] != level)
         i++;
-
-    // 2. Switch with fallthrough
     switch (i)
     {
         case 0:
             this->debug();
-            // Intentional fallthrough
         case 1:
             this->info();
-            // Intentional fallthrough
         case 2:
             this->warning();
-            // Intentional fallthrough
         case 3:
             this->error();
             break;

@@ -17,7 +17,7 @@ int main()
     harl.complain("ERROR");
 
     std::cout << "\n--- Testing Invalid Level ---" << std::endl;
-    harl.complain("COMPLIMENT"); // Should do nothing
+    harl.complain("COMPLIMENT");
 
     return 0;
 }

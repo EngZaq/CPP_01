@@ -34,7 +34,6 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-    // Array of function pointers to member functions
     void (Harl::*funcs[])(void) = {
         &Harl::debug,
         &Harl::info,

@@ -2,14 +2,13 @@
 
 int main()
 {
-    std::cout << "=== Testing newZombie (heap allocation) ===" << std::endl;
+    std::cout << "Testing newZombie (heap allocation)" << std::endl;
     
-    // Test 1: Normal heap zombie using newZombie
     Zombie* heapZombie = newZombie("HeapZombie");
     heapZombie->announce();
     delete heapZombie;
     
-    std::cout << "\n=== Testing randomChump (stack allocation) ===" << std::endl;
+    std::cout << "\nTesting randomChump (stack allocation)" << std::endl;
     randomChump("StackZombie");    
     Zombie* z1 = newZombie("Alpha");
     Zombie* z2 = newZombie("Beta");
@@ -23,6 +22,6 @@ int main()
     delete z2;
     delete z3;
     
-    std::cout << "\n=== End of main ===" << std::endl;
+    std::cout << "\nEnd of main" << std::endl;
     return 0;
 }

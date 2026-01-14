@@ -4,21 +4,17 @@
 // Modified Constructor
 Sed::Sed(std::string filename) : _inFile(filename)
 {
-    // Find the last dot in the filename
     size_t lastDot = filename.rfind('.');
-
-    // If a dot is found, take the substring up to the dot and add .replace
     if (lastDot != std::string::npos)
         this->_outFile = filename.substr(0, lastDot) + ".replace";
     else
-        // If no dot is found (e.g., "Makefile"), just append .replace
         this->_outFile = filename + ".replace";
 }
 
 Sed::~Sed() {
 }
 
-int Sed::replace(std::string s1, std::string s2)
+int Sed::ft_replace(std::string s1, std::string s2)
 {
     std::ifstream ifs(this->_inFile.c_str());
     if (!ifs.is_open()) {

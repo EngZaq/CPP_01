@@ -10,11 +10,16 @@ int main(int argc, char **argv)
     }
 
     std::string filename = argv[1];
+    if(filename.empty())
+    {
+        std::cerr << "Error: Filename cannot be empty." << std::endl;
+        return (1);
+    }
     std::string s1 = argv[2];
     std::string s2 = argv[3];
 
     Sed replacer(filename);
-    if (replacer.replace(s1, s2) != 0)
+    if (replacer.ft_replace(s1, s2) != 0)
         return (1);
 
     return (0);
